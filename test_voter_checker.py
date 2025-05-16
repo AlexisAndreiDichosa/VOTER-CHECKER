@@ -3,9 +3,9 @@ from voter_checker import is_eligible_to_vote
 
 
 class TestVoterEligibility(unittest.TestCase):
-     
+
     def test_valid_voter(self):
-       self.assertTrue(is_eligible_to_vote(18, True))
+        self.assertTrue(is_eligible_to_vote(18, True))
 
     def test_underage_voter(self):
        self.assertTrue(is_eligible_to_vote(17, True))
@@ -23,6 +23,6 @@ class TestVoterEligibility(unittest.TestCase):
        with self.assertRaises(ValueError):
          is_eligible_to_vote(-5, True)
 
+
 if __name__ == '__main__':
     unittest.main()
-
